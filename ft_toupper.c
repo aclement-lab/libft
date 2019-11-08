@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aclement <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/05 14:57:22 by aclement          #+#    #+#             */
-/*   Updated: 2019/11/07 16:40:48 by aclement         ###   ########.fr       */
+/*   Created: 2019/11/06 10:59:56 by aclement          #+#    #+#             */
+/*   Updated: 2019/11/06 11:42:35 by aclement         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ctype.h>
 #include <stdio.h>
 
-int	ft_isalpha(int c)
+int	ft_toupper(int c)
 {
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-		return (1);
-	return (0);
+	if ((c >= 97) && (c <= 122))
+		return (c - 32);
+	return (c);
 }
 
 int	main(void)
 {
-	int test;
+	char test;
 
-	test = 'A';
-	printf("%d\n", ft_isalpha(test));
+	test = '!';
+	printf("%c\n", ft_toupper(test));
 	return (0);
 }

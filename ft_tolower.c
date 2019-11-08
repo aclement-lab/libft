@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aclement <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/05 14:57:22 by aclement          #+#    #+#             */
-/*   Updated: 2019/11/07 16:40:48 by aclement         ###   ########.fr       */
+/*   Created: 2019/11/06 11:43:36 by aclement          #+#    #+#             */
+/*   Updated: 2019/11/06 11:51:20 by aclement         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ctype.h>
 #include <stdio.h>
 
-int	ft_isalpha(int c)
+int	ft_tolower(int c)
 {
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-		return (1);
-	return (0);
+	if ((c >= 65) && (c <= 90))
+		return (c + 32);
+	return (c);
 }
 
 int	main(void)
 {
-	int test;
+	char test;
 
-	test = 'A';
-	printf("%d\n", ft_isalpha(test));
+	test = '&';
+	printf("%c\n", ft_tolower(test));
 	return (0);
 }

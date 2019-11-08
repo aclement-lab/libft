@@ -6,7 +6,7 @@
 /*   By: aclement <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 18:17:37 by aclement          #+#    #+#             */
-/*   Updated: 2019/11/05 18:28:46 by aclement         ###   ########.fr       */
+/*   Updated: 2019/11/07 16:59:19 by aclement         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ int	ft_isdigit(int c)
 int	main(void)
 {
 	int chiffre;
-	chiffre = 65;
+
+	chiffre = '@';
 	printf("%d\n", ft_isdigit(chiffre));
 	return (0);
 }
